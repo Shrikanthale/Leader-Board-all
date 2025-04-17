@@ -8,6 +8,8 @@ router.get("/", async (req, res) => {
     const activityData = await ActivityModel.find();
     res.status(200).json(activityData);
   } catch (error) {
+    // error here
+
     console.error("Error fetching activity data:", error);
     res.status(500).json({ message: "Internal server error" });
   }
